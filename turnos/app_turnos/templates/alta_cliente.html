@@ -1,0 +1,68 @@
+{% extends "padre.html" %}
+
+{%  load static %}
+
+
+{% block contenido %}
+
+ <!-- Projects-->
+<section class="projects-section bg-light" id="projects">
+    <div class="container px-4 px-lg-5">
+        <!-- Featured Project Row-->
+        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+            <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="{% static 'app_turnos/assets/img/3.jpg' %}" alt="..." /></div>
+            <div class="col-xl-4 col-lg-5">
+                <div class="featured-text text-center text-lg-left">
+                    <h4>Alta de Cliente:</h4>
+                    <p class="text-black-50 mb-0">
+                    <form action="alta_cliente" method="POST">
+                        {% csrf_token %}
+                   
+                    <h6 class="post-subtitle">Nombre:</h6>
+                    <p class="post-meta">
+                        <input type="text" name="nombre" required>
+                    </p>
+                    <h6 class="post-subtitle">DNI:</h6>
+                    <p class="post-meta">
+                       <input type="number" name="dni" required>
+                    </p>
+                    <h6 class="post-subtitle">Telefono:</h6>
+                    <p class="post-meta">
+                       <input type="number" name="telefono" required>
+                    </p>
+                    <h6 class="post-subtitle">Domicilio:</h6>
+                    <p class="post-meta">
+                       <input type="text" name="domicilio" required>
+                    </p>
+                    <h6 class="post-subtitle">E-mail:</h6>
+                    <p class="post-meta">
+                       <input type="text" name="email" required>
+                    </p>
+                   <input type="submit" value="Enviar">
+                
+                </form>
+            </p>
+        </div>
+    </div>
+</div>
+
+</div>
+
+</div>
+</section>
+<div class="social d-flex justify-content-center">
+<a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+<a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+<a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+</div>
+
+<!-- Footer-->
+<footer class="footer bg-black small text-center text-white-50">
+<div class="container px-4 px-lg-5">Copyright &copy; EntrenadordeRunning 2022</div>
+</footer>
+{% endblock %} 
+
+
+
+
+        
